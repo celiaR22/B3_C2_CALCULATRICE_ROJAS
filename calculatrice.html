@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link href="calculatrice.css" rel="stylesheet" >
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="calculatrice.js"></script>
+    <title>Calculatrice</title>
+</head>
+<body>
+    <div class="container py-5 h-80 rounded-circle">
+        <div class="row d-flex justify-content-center align-items-center h-80   ">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5  ">
+                <div class="calculator card shadow p-2">
+
+                    <input type="text" id="screen" class="calculator-screen z-depth-1 bg-secondary mt-2 rounded" value="" disabled />
+      
+                    <div class="calculator-keys">
+      
+                    <button type="button" class="operator btn btn-primary buttonCalcul" value="+">+</button>
+                    <button type="button" class="operator btn btn-primary buttonCalcul" value="-">-</button>
+                    <button type="button" class="operator btn btn-primary buttonCalcul" value="*">&times;</button>
+                    <button type="button" class="operator btn btn-primary buttonCalcul" value="/">&divide;</button>
+                
+                    <button type="button" value="7" class="btn btn-light waves-effect buttonCalcul">7</button>
+                    <button type="button" value="8" class="btn btn-light waves-effect buttonCalcul">8</button>
+                    <button type="button" value="9" class="btn btn-light waves-effect buttonCalcul">9</button>
+      
+      
+                    <button type="button" value="4" class="btn btn-light waves-effect buttonCalcul">4</button>
+                    <button type="button" value="5" class="btn btn-light waves-effect buttonCalcul">5</button>
+                    <button type="button" value="6" class="btn btn-light waves-effect buttonCalcul">6</button>
+      
+      
+                    <button type="button" value="1" class="btn btn-light waves-effect buttonCalcul">1</button>
+                    <button type="button" value="2" class="btn btn-light waves-effect buttonCalcul">2</button>
+                    <button type="button" value="3" class="btn btn-light waves-effect buttonCalcul">3</button>
+      
+      
+                    <button type="button" value="0" class="btn btn-light waves-effect buttonCalcul">0</button>
+                    <button type="button" class="decimal function btn btn-secondary buttonCalcul" value=".">.</button>
+                    <button type="button" class="all-clear function btn btn-danger btn-sm" value="all-clear">AC</button>
+      
+                    <button type="button"  id="equalOperator" class="equal-sign operator btn btn-success" value="=">=</button>
+      
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
