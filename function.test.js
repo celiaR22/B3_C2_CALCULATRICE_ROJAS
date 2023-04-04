@@ -33,3 +33,16 @@ test('division avec virgule', () => {
     expect(getResultOperation('10.5 / 2')).toBe(5.25);
 }); 
 
+// test tdd
+
+test('opération --', () => {
+    expect(getResultOperation('1-(-1)')).toBe(2);
+}); 
+
+test('opération +-', () => {
+    expect(getResultOperation('1+(-1)')).toBe(0);
+}); 
+
+test('opération () priorité )', () => {
+    expect(getResultOperation('9 * (15 - (18 - 7))')).toBe(36);
+}); 

@@ -1,15 +1,22 @@
 window.addEventListener("DOMContentLoaded", (event) => {
-
     const buttonsCalcul = document.querySelectorAll('.buttonCalcul')
     const screen = document.querySelector('#screen');
     const equalOperator = document.querySelector('#equalOperator')
-    const arrayCalcul = [];
+    let arrayCalcul = [];
+    let lastButtonClicked = null
+    let arrayOperator = ['/','*','-','+']
 
     buttonsCalcul.forEach(element => {
         element.addEventListener('click', event => {
             if(element.value == 'clear'){
                 screen.value = null;
+                arrayCalcul =[];
+                lastButtonClicked = null
             }else{
+                if(arrayOperator.includes(element.value) && arrayOperator.includes(lastButtonClicked)){
+                    return;
+                }
+                lastButtonClicked = element.value
                 const arrayValue = getCalcul(arrayCalcul, element.value);
                 screen.value = arrayValue;
             }
@@ -18,9 +25,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
 
     equalOperator.addEventListener('click',event =>{
-        const value = screen.value;
-        screen.value ='';
-        screen.value = getResultOperation(value);
+        screen.value = getResultOperation(screen.value);
+        arrayCalcul =[];
     });
 });
 
