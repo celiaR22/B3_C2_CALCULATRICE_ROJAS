@@ -17,18 +17,22 @@ window.addEventListener("DOMContentLoaded", (event) => {
         screen.value ='';
         screen.value = getResultOperation(value);
     });
+});
 
-    function getCalcul(array, value){
-        if(value && value != null){
-            array.push(value)
-        }else{
-            return;
-        }
-       return array.join('');
-    };
-
-    function getResultOperation(value){
-        return eval(value)
+function getCalcul(array, value){
+    if(value && value != null){
+        array.push(value)
+    }else{
+        return;
     }
+   return array.join('');
+};
 
-  });
+function getResultOperation(value){
+    return eval(value)
+}
+
+module.exports ={
+    getResultOperation,
+    getCalcul
+  }
