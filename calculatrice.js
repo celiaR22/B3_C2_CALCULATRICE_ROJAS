@@ -7,8 +7,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     buttonsCalcul.forEach(element => {
         element.addEventListener('click', event => {
-            const arrayValue = getCalcul(arrayCalcul, element.value);
-            screen.value = arrayValue
+            if(element.value == 'clear'){
+                screen.value = null;
+            }else{
+                const arrayValue = getCalcul(arrayCalcul, element.value);
+                screen.value = arrayValue;
+            }
+            
         })
     });
 
